@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PlatziVideo</title>
+  <link rel="stylesheet" href="../node_modules/normalize.css/normalize.css">
+  <link rel="stylesheet" href="./assets/index.css">
+</head>
+
+<body>
+  <header>
+    <h1>PlatziVideo</h1>
+    <p>An extensible media player.</p>
+  </header>
+  <main class="container">
+    <video class="movie">
+      <source src="./assets/spring-blender-open-movie.mp4">
+    </video>
+
+    <button id="playButton">Play/Pause</button>
+    <button id="muteButton">Mute/Unmute</button>
+  </main>
+</body>
+<script>
+  const video = document.querySelector('video');
+  const button = document.querySelector('button');
+
+  function MediaPlayer(config) {
+    this.media = config.el;
+  }
+
+  MediaPlayer.prototype.play = function () {
+    if (this.media.paused) {
+      this.media.play();
+    } else {
+      this.media.pause();
+    }
+  }
+
+  const player = new MediaPlayer({ el: video });
+  button.onclick = () => player.play();
+
+</script>
+
+</html>

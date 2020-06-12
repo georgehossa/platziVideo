@@ -1,0 +1,22 @@
+{
+  "name": "platziVideo",
+  "version": "1.0.0",
+  "main": "scr/index.js",
+  "keywords": [
+    "platzi",
+    "Javascript",
+    "video player"
+  ],
+  "author": "Jorge Ossa <jorgehossa@gmail.com>",
+  "license": "MIT",
+  "description": "Video player developed in Platzi's Profesional JavaScript course",
+  "scripts": {
+    "start": "live-server --open=./src"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  }
+}
